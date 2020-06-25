@@ -20,11 +20,12 @@ class School
   end
 
 def sort
-  nu_hash = {}
-  roster.each do |x, y|
-    nu_hash[x] = y.sort
-  end
-  nu_hash
+  hash = {}
+  hash["new_key"] = []
+hash["new_key"] << "new_value_for_value_array"
+
+hash
+ => {"new_key"=>["new_value_for_value_array"]} 
 end
 
 end
@@ -34,6 +35,10 @@ end
 school = School.new("Bayside High School")
 school.roster
 school.add_student("Zach Morris", 9)
+school.roster
 school.add_student("AC Slater", 9)
 school.add_student("Kelly Kapowski", 10)
 school.add_student("Screech", 11)
+school.roster
+school.grade(9)
+school.sort
